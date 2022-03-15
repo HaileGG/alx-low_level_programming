@@ -1,4 +1,5 @@
-#include <holberton.h>
+#include <main.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -7,7 +8,7 @@
  */
 int main(void)
 {
-	_putchar("Holberton");
+	_putchar("Hello C");
 	_putchar('\n');
 
 	return (0);
