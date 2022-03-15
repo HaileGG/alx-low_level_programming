@@ -1,4 +1,4 @@
-#inclue "main.h"
+#include "main.h"
 
 /**
  * _abs - calculate the absolute value os the number from zero.
