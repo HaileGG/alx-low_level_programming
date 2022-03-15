@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-	_putchar('Main');
+	_putchar("Main");
 	return (0);
 }
