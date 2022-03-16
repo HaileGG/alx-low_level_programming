@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include "main.h"
-
 /**
  * main -  print the first 98 fibonacci numbers.
  * Return: Nothing.
@@ -14,7 +12,7 @@ int main(void)
 	c = 0;
 	i = 0;
 	j = 1;
-	for (c = 1; c <= 98; c++)
+	for (c = 1; c <= 91; c++)
 	{
 		k = i + j;
 		i = j;
