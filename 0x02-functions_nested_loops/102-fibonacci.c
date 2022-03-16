@@ -11,7 +11,7 @@ int main(void)
 
 	i = 0;
 	j = 1;
-	for (c = 0; c <= 50; c++)
+	for (c = 0; c < 50; c++)
 	{
 		k = i + j;
 		i = j;
