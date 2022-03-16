@@ -18,7 +18,7 @@ int main(void)
 		j = k;
 		printf("%lu", k);
 		if (c == 49)
-			putchar('\n');
+			_putchar('\n');
 		else
 		{
 			printf(", ");
