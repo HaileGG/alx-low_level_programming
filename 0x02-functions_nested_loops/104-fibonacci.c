@@ -14,7 +14,7 @@ int main(void)
 	c = 0;
 	i = 0;
 	j = 1;
-	for (c = 1; c <= 91; c++)
+	for (c = 1; c <= 98; c++)
 	{
 		k = i + j;
 		i = j;
@@ -35,9 +35,9 @@ int main(void)
 		i = j;
 		j = k;
 		if (p >= 100)
-			printf("%lu", k, p);
+			printf("%lu%lu", k, p);
 		else
-			printf("%lu", k, p);
+			printf("%lu%lu", k, p);
 		if (c != 98)
 			printf(", ");
 		c++;
