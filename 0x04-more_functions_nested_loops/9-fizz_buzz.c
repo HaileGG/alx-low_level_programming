@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * fizz_buzz - prints the points
- * @x: Variable
+ * 
  * Return: Always 0
  */
 int main(void)
@@ -25,13 +24,13 @@ int main(void)
 		}
 		else
 		{
-			printf(' ');
+			printf("%d", x);
 		}
 		if (x != 100)
 		{
-			_putchar(' ');
+			printf(' ');
 		}
 	}
-	_putchar(\n'');
+	printf('\n');
 	return (0);
 }
