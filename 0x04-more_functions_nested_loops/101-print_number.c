@@ -31,16 +31,16 @@ void print_number(int n)
 			_putchar('-');
 		}
 		z = n;
-	while (z / b > 9)
-	{
-		b = b * 10;
-	}
-	while (b > 0)
-	{
-		m = z / b;
-		z = z % b;
-		_putchar(m + '0');
-		b = b / 10;
-	}
+		while (z / b > 9)
+		{
+			b = b * 10;
+		}
+		while (b > 0)
+		{
+			m = z / b;
+			z = z % b;
+			_putchar(m + '0');
+			b = b / 10;
+		}
 	}
 }
