@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - prints the points
- * 
+ * fizz_buzz - prints the points.
  * Return: Always 0
  */
 int main(void)
