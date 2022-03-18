@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * print_square - prints the square lines
- * @x; Variable
- * @y: Variable
+ * print_square - prints the square lines.
+ * @size: size - Variable
  * Return: Always 0
  */
 void print_square(int size)
