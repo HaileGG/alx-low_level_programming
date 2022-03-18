@@ -3,7 +3,6 @@
 /**
  * print_disgonal - prints the diagonal line.
  * @n: n - Variable.
- *
  * Return: Always 0.
  */
 void print_diagonal(int n)
