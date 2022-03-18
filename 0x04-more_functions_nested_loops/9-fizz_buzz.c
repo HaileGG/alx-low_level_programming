@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - prints the points.
+ * main - prints the FizzBuzz, Fizz and Buzz instead of 3 or 5.
  * Return: Always 0
  */
 int main(void)
