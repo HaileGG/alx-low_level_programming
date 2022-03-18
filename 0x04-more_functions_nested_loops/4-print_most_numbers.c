@@ -2,7 +2,7 @@
 
 /**
  * print_most_numbers - prints most numbers from 0 through 9
- * 
+ *
  * Return: Always 0
  */
 void print_most_numbers(void)
@@ -11,7 +11,7 @@ void print_most_numbers(void)
 
 	for (a = 0; a <= 9; a++)
 	{
-		if (a !=2 && a != 4)
+		if (a != 2 && a != 4)
 		{
 			_putchar(a + '0');
 		}
