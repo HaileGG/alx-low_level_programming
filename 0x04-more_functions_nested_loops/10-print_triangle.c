@@ -1,19 +1,17 @@
 #include "main.h"
 
 /**
- * print_triangle - prints the triangle line
- *
- * @size: Size of triangle.
- *
- * Return: Always 0
+ * print_triangle - prints the triangular shape using #.
+ * @size: size - Variable.
+ * Return: Always 0.
  */
-void print_triangle(int size)
+void print_triangle(void)
 {
 	int x, y;
 
 	if (size > 0)
 	{
-		for (x = ; x <= size; x++)
+		for (x = 1; x <= size; x++)
 		{
 			for (y = 1; y <= size; y++)
 			{
@@ -21,7 +19,7 @@ void print_triangle(int size)
 				{
 					_putchar(' ');
 				}
-				else 
+				else
 				{
 					_putchar('#');
 				}
@@ -33,5 +31,4 @@ void print_triangle(int size)
 	{
 		_putchar('\n');
 	}
-
 }
