@@ -2,15 +2,16 @@
 
 /**
  * print_triangle - prints the triangle line
- * @x: Variable
- * @y: Variable
+ *
+ * @size: Variable.
+ *
  * Return: Always 0
  */
 void print_triangle(int size)
 {
 	int x, y;
 
-	int (size >0)
+	int (size > 0)
 	{
 		for (x = 1; x <= size; x++)
 		{
