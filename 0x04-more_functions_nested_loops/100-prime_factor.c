@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the prime factor of the number
- * @x: Variable
- * @y: Variable
+ * main - prints the prime factor of the number.
+ *
  * Return: Always 0
  */
 int main(void)
@@ -16,7 +15,7 @@ int main(void)
 	{
 		while (x % y == 0)
 		{
-			x = x /y;
+			x = x / y;
 		}
 	}
 	printf("%lu", y);
