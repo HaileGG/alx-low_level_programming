@@ -2,7 +2,7 @@
 
 /**
  * _puts - function that prints a string, followed by a new line.
- * @s: parameter defined in main.
+ * @str: parameter defined in main.
  * Return: void.
  */
 void _puts(char *str)
