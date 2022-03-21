@@ -5,7 +5,7 @@
  * @s: parameter defined in main.
  * Return: void.
  */
-void _puts(char *s)
+void _puts(char *str)
 {
 	while (*str != '\0')
 	{
