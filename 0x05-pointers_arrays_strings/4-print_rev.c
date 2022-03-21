@@ -17,5 +17,5 @@ void print_rev(char *s)
 	{
 		_putchar(*s--), len--;
 	}
-	_putchar('\0');
+	return (0);
 }
