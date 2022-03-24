@@ -1,5 +1,5 @@
 #include "main.h"
-#include <dtsio.h>
+#include <stdio.h>
 /**
  * _strncat - concatenates two strings.
  * @dest: destination value.
