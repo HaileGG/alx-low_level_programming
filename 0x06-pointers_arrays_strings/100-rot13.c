@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * rot13 - encode a atring with rot13.
  * @s: the string.
@@ -10,7 +10,7 @@ char *rot13(char *s)
 	int j = 0;
 	char *rot = s;
 	char rotv1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rotv2[] = "NOPQRSTUWXYZABCDEFGHIJKLMnopqrstuwxyzabcdefghijklmn";
+	char rotv2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (*rot)
 	{
