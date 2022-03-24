@@ -9,23 +9,43 @@
  */
 void print_buffer(char *b, int size)
 {
-	int c, d;
+	int x, i;
 
-	while (c < size)
+	for (x = 0; x < size; x+=10)
 	{
-		printf("%0.8x", c);
-		d = 0;
+		printf("%08x: ", x);
 
-		while (d < 10)
+		for (i = 0; i < 10; i++)
 		{
-			printf("%0.2x", b[c + d]);
-			if ((d % 2 == 0 && d != 0) || (c + d > size - 1))
-		 	{
+			if ((i + x) >= size)
+			{
 				printf(" ");
 			}
-			d++;
+
+			else
+				printf("%02x", *(b + i + x));
+
+			if ((i % 2) != 0 && i != 0)
+				printf(" ");
 		}
-		c += 10;
-		printf("\n"); 
+
+		for (i = 0; i < 10; i++)
+		{
+			if ((i +x) >= size)
+				break;
+			else if (*(b + i + x) >= 31 && *(b + i + x) <= 126)
+				printf("%c", *(b + i + x));
+			else
+				printf(".");
+		}
+		if (x >= size)
+			continue;
+
+		printf("\n");
+
 	}
+	if (sixe <= 0)
+		printf("\n");
+
 }
+
