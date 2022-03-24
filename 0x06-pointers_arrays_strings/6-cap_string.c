@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * cap_string - captaliza all words in string.
@@ -8,25 +7,37 @@
  */
 char *cap_string(char *s)
 {
-	int a = 0, i;
-       	int cspc = 13;
-	char spec[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+	int j, ch;
+	int i = 1;
+	char a[] = {32, '\t', '\n', 44, ';', ',', 46, '!', '?', '"', '(', ')', '{', '}'};
 
-	while (s[a])
+	if (s[0] > 96 && s[0] < 123)
 	{
-		i = 0;
+		s[0] -= 32;
+	}
 
-		while (i < cspc)
+	while (s[i] != '\0')
+	{
+		if (s[i] > 96 && s[i] < 123)
 		{
-			if (a == 0 || (s[a - 1] == spec[a] && s[a] >= 97 && s[a] <= 122))
+			i = 0;
+			ch = 0;
+			
+			while (ch == 0  && j < 13)
 			{
-				s[a] -= 32;
-				
-				i++;
+				if (s[i - 1] == a[j])
+				{
+					ch = 1;
+				}
+				j++;
+			}
+
+			if (ch == 1)
+			{
+				s[i] -= 32;
 			}
 		}
-
-		a++;
+		i++;
 	}
 
 	return (s);
