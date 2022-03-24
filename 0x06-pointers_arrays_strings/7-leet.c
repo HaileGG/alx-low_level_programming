@@ -7,21 +7,22 @@
  */
 char *leet(char *s)
 {
-	int i = 0;
-	char *ans = s;
-	char *spec1 = "aAeEoOtTlL";
-	char *spec2 = "4433007711";
+	int a = 0, b = 0, l = 5;
+	char r[] = {'A', 'E', 'O', 'T', 'L'};
+	char n[] = {'4', '3', '0', '7', '1'};
 
-	while (*s)
+	while (s[a])
 	{
-		for (i = 0; spec[i]; i++)
+		b = 0;
+		while (b < 1)
 		{
-			if (*s = spec1[i])
+			if (s[a] == r[b] || s[a] - 32 == r[b])
 			{
-				*s = spec2[i];
+				s[a] = n[b];
 			}
+			b++;
 		}
-		s++;
+		a++;
 	}
-	return (ans);
+	return (s);
 }
