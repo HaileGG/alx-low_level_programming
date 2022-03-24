@@ -3,46 +3,35 @@
 
 /**
  * print_buffer - prints a buffer.
- * @C: char
+ * @b: char
  * @size: int
  * Return: void
  */
 void print_buffer(char *b, int size)
 {
-	int i, j;
+	int c, d;
 
-	for (i = 0; i < size; i+=10)
-	{
-		printf("%08i", i);
-
-		for (j = 0; j < 10; j++)
-		{
-			if (j + i >= size)
-				printf("  ");
-
-			else
-				printf("%02i", *(b + j + i));
-
-			if ((i % 2) != 0 && i != 0)
-				printf(" ");
-		}
-
-	for (j = 0; j < 10; j++)
-	{
-		if ((j + i) >= size)
-			break;
-
-		else if (*(b + j + i) >= 31 && *(b + j + i) <= 126)
-			printf("%c", *(b + j + i));
-
-		else 
-			printf(".");
-	}
-	if (i >= size)
-		continue;
-	printf("\n");
-	}
+	c = 0;
 
 	if (size <= 0)
+	{
 		printf("\n");
+	}
+
+	while (c < size)
+	{
+		printf("%8.8x", c);
+		d = 0;
+		while (d < 10)
+		{
+			printf("%02x", b[c + d]);
+			if ((d % 2 == 0 && d != 0) || (c + d > size -1))
+			{
+				printf(" ");
+			}
+			d++;
+		}
+		c += 10;
+		printf("\n"); 
+	}
 }
