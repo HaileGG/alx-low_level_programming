@@ -25,5 +25,4 @@ char *rot13(char *s)
 		rot++;
 	}
 	return (s);
-
 }
