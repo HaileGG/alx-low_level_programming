@@ -18,7 +18,7 @@ char *cap_string(char *s)
 
 		while (i < cspc)
 		{
-			if (a = 0 || s[a -1] == spec[a] && s[a] >= 97 && s[a] <= 122)
+			if (a == 0 || (s[a - 1] == spec[a] && s[a] >= 97 && s[a] <= 122))
 			{
 				s[a] -= 32;
 				
@@ -30,5 +30,4 @@ char *cap_string(char *s)
 	}
 
 	return (s);
-
 }
