@@ -8,7 +8,8 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i, sc, ec, c;
+	int *sc, *ec, c;
+	int i;
 
 	sc = a;
 	ec = a;
