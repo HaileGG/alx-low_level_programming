@@ -1,19 +1,30 @@
 #include "main.h"
 
 /**
- * rev_array - reverse array.
+ * reverse_array - reverse array.
  * @a: array.
  * @n: integer.
  * Return: void
  */
-void rev_array(int *a, int n)
+void reverse_array(int *a, int n)
 {
-	int i, c;
+	int i,sc, ec, c;
+
+	sc = a;
+	ec = a;
+
+	for (i = 0; i < n - 1; i++)
+	{
+		ec++;
+	}
 
 	for (i = 0; (i < (n - 1) / 2); i++)
 	{
-		c = a[i];
-		a[i] = a[n - 1- i];
-		a[n = 1- i] = c;
+		c = *ec;
+		*ec = *sc;
+		*sc = c;
+
+		sc++;
+		ec--;
 	}
 }
