@@ -1,43 +1,31 @@
 #include "main.h"
 
 /**
- * cap_string - captaliza all words in string.
+ * *cap_string - captalize all words in string.
  * @s: string.
- * Return: address of s.
+ * Return: the resulting string.
  */
 char *cap_string(char *s)
 {
-	int j, ch;
-	int i = 1;
-	char a[] = {32, '\t', '\n', 44, ';', ',', 46, '!', '?', '"', '(', ')', '{', '}'};
+	int i, j;
+	char spe[13] = {' ', '\t', '\n', ';', ',', '.', '!', '?', '"', '(', ')', '{', '}'};
 
-	if (s[0] > 96 && s[0] < 123)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		s[0] -= 32;
-	}
+		if (i == 0 s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
 
-	while (s[i] != '\0')
-	{
-		if (s[i] > 96 && s[i] < 123)
+		for  (j = 0; j < 13; j++)
 		{
-			i = 0;
-			ch = 0;
-			
-			while (ch == 0  && j < 13)
-			{
-				if (s[i - 1] == a[j])
-				{
-					ch = 1;
-				}
-				j++;
-			}
 
-			if (ch == 1)
+			if (s[i] == spe[j])
 			{
-				s[i] -= 32;
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
 			}
 		}
-		i++;
 	}
 
 	return (s);
