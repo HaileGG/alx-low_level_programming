@@ -3,24 +3,19 @@
 /**
  * _strcmp - compare two string.
  * @s1: string.
- * @s2: strmp.
- * Return: int
+ * @s2: strcmp.
+ * Return: dest
  */
 int _strcmp(char *s1, char *s2)
 {
-	while (((*s1 != '\0') && (*s2 != '\0')) && (*s1 == *s2))
+	char *str1 = s1;
+	char *str2 = s2;
+	
+	while (((*str1 != '\0') && (*str2 != '\0')) && (*str1 == *str2))
 	{
-		s1++;
-		s2++;
+		str1++;
+		str2++;
 	}
 
-	if (*s1 == *s2)
-	{
-		return (0);
-	}
-
-	else 
-	{
-		return (*s1 - *s2);
-	}
+	return (*str1 - *str2);
 }
