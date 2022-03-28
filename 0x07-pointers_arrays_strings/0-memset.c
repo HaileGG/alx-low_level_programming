@@ -7,7 +7,7 @@
  * @n: unsigned int.
  * Return: char.
  */
-char *_memsetchar(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
