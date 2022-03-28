@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - print of 2  diagonal.
+ * print_diagsums - print of two  diagonal.
  * @a: int.
  * @size: int size.
  * Return: void.
@@ -26,5 +26,5 @@ void print_diagsums(int *a, int size)
 			}
 		}
 	}
-	printf("%i, %i\n", s, t);
+	printf("%d, %d\n", s, t);
 }
