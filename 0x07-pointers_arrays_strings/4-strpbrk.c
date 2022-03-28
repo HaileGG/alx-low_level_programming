@@ -6,20 +6,19 @@
  * @accept: string.
  * Return: char.
  */
-char *_strpbrk(char *s, char accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int i;
+	int i, j;
 
-	while (*s)
+	for (i = 0; *(s + i); i++)
 	{
-		for (i = 0; accept[i]; i++)
+		for (j = 0; *(accept + j); j++)
 		{
-			if (*s == accept[i])
+			if (*(s + i) == *(accept + j))
 			{
-				return (s);
+				return (s + i);
 			}
 		}
-		s++;
 	}
 	return ('\0');
 }
