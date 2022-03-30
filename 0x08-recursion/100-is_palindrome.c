@@ -7,13 +7,21 @@
  *
  * Return: On success 1.
  */
-int palind2(char *a, int l)
+int palind2(char *c, int s, int e)
 {
-	if (*a == 0)
+	if (s == e)
 	{
-		return (l - 1);
+		return (1);
 	}
-	return (palind2(a + 1, l + 1));
+	if (c[s] != c[e])
+	{
+		return (0);
+	}
+	if (s < e + 1)
+	{
+		return (palind2(c, s + 1, e - 1));
+	}
+	return (1);
 }
 /**
  * palind3 - compares string vs string reverse.
@@ -22,17 +30,13 @@ int palind2(char *a, int l)
  *
  * Return: On success 1.
  */
-int palind3(char *a, int l)
+int palind3(char *s)
 {
-	if (*a != *(a + 1))
+	if (*s == '\0')
 	{
 		return (0);
 	}
-	else if (*a == 0)
-	{
-		return (1);
-	}
-	return (palind3(a + 1, l - 2));
+	return (1 + palind3(s + 1));
 }
 
 /**
@@ -43,8 +47,11 @@ int palind3(char *a, int l)
  */
 int is_palindrome(char *s)
 {
-	int l;
+	int count = palind3(s);
 
-	l = palind2(s, 0);
-	return (palind3(s, l));
+	if (count == 0)
+	{
+		return (1);
+	}
+	return (palind2(s, 0, count - 1));
 }
