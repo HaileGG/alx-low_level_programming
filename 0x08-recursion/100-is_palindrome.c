@@ -2,8 +2,9 @@
 
 /**
  * palind2 - obtains length of a.
- * @a: string.
- * @l: integer to count length.
+ * @c: string.
+ * @s: integer to count length.
+ * @e: string.
  *
  * Return: On success 1.
  */
@@ -25,8 +26,7 @@ int palind2(char *c, int s, int e)
 }
 /**
  * palind3 - compares string vs string reverse.
- * @a: string.
- * @l: length.
+ * @s: string.
  *
  * Return: On success 1.
  */
