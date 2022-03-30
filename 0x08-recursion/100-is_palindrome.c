@@ -41,7 +41,7 @@ int palind3(char *a, int l)
  *
  * Return: On success 1.
  */
-int is_palindrome()
+int is_palindrome(char *s)
 {
 	int l;
 
