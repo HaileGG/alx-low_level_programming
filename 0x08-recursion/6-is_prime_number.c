@@ -17,7 +17,7 @@ int prime2(int a, int b)
 	{
 		return (0);
 	}
-	return (a, b + 1);
+	return (prime2(a, b + 1));
 }
 /**
  * is_prime_number - checks is a number is prime.
