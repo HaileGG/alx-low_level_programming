@@ -2,10 +2,10 @@
 
 /**
  * _sqrt_recursion - returns the natural square root of n.
+ * sqrt2 - makes possible to evaluate from 1 to 0.
  * @n: number integer.
  *
  * Return: On success 1.
- * On error, -1 is returnd, and errno is set approprately.
  */
 int sqrt2(int a, int b)
 {
