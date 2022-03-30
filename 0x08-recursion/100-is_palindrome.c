@@ -32,7 +32,7 @@ int palind3(char *a, int l)
 	{
 		return (1);
 	}
-	return (palind3(a + 1, l -2));
+	return (palind3(a + 1, l - 2));
 }
 
 /**
