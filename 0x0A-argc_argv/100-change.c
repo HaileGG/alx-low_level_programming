@@ -37,7 +37,7 @@ int coinConverter(int i)
 		else
 		       i -= 1;
 
-		conut++;
+		count++;
 
 	}
 	return (count);
