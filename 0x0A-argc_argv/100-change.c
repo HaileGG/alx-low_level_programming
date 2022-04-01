@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - prints one argument for minimum coin count.
+ * main - Adds positive numbers.
  * @argc: Number of command line arguments.
  * @argv: Array name.
+ *
  * Return: 0 or 1
  */
 int main(int argc, char *argv[])
@@ -27,8 +28,10 @@ int main(int argc, char *argv[])
 	for (i = 0; i < 5; i++)
 	{
 		if (cn >= array[i])
-		count += (cn / array[i]);
-		cn = cn % array[i];
+		{
+			count += (cn / array[i]);
+			cn = cn % array[i];
+		}
 	
 		if (cn == 0)
 		{
