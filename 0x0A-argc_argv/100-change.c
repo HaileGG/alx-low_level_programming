@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
 	if (cn < 0)
 	{
-		printf(0"\n");
+		printf("0\n");
 	}
 	for (i = 0; i < 5; i++)
 	{
