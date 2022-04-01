@@ -10,8 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i. j;
-
+	int i, j;
 
 	if (argc == 1 || argc == 2)
 	{
@@ -29,5 +28,5 @@ int main(int argc, char *argv[])
 
 		printf("%d\n", j);
 	}
-	retrun (0);
+	return (0);
 }
