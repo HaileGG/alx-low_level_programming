@@ -7,9 +7,9 @@
  * @argv: Name of Array.
  * Return: 0
  */
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
-	printf("%s", argv[argc * 0]);
+	printf("%s\n", argv[argc * 0]);
 
 	return (0);
 }
