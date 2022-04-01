@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /**
  * main - Adds positive numbers.
@@ -21,6 +22,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	cn = atoi(argv[1]);
+
 	if (cn < 0)
 	{
 		printf("0\n");
@@ -30,7 +32,7 @@ int main(int argc, char *argv[])
 		if (cn >= array[i])
 		{
 			count += (cn / array[i]);
-			cn = cn % array[i];
+			cn = (cn % array[i]);
 		}
 	
 		if (cn == 0)
