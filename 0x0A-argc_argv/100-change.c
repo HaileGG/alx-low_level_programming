@@ -30,15 +30,19 @@ int coinConverter(int i)
 		else if (i % 2 == 0)
 		{
 			if (i % 10 == 6)
+			{
 				i -= 1;
-			else 
+			}
+			else
+			{	
 				i -= 2;
+			}
 		}
 		else
-		       i -= 1;
-
+		{
+		       	i -= 1;
+		}
 		count++;
-
 	}
 	return (count);
 }
