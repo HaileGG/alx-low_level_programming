@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
 			count += (cn / array[i]);
 			cn = (cn % array[i]);
 		}
-	
 		if (cn == 0)
 		{
 			printf("%d\n", count);
