@@ -25,17 +25,14 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			ptr = argv[i];
-			len = strlen(ptr);
-
+			len = strlen(ptri);
 			for (j = 0; j < len; j++)
-			{
-				if (isdigit(*(ptr + j)) == 0)
+			{				if (isdigit(*(ptr + j)) == 0)
 				{
 					printf("Error\n");
 					return (1);
 				}
 			}
-
 			sum += atoi(argv[i]);
 		}
 		printf("%d\n", sum);
