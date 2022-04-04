@@ -15,7 +15,7 @@ char *argstostr(int ac, int **av)
 
 	if (ac == 0 || av == NULL)
 	{
-		return (Null);
+		return (NULL);
 	}
 	for (i = 0; i < ac; i++)
 	{
@@ -25,7 +25,7 @@ char *argstostr(int ac, int **av)
 		}
 		size += j + 1;
 	}
-	str = maloc(size + 1);
+	str = malloc(size + 1);
 	if (str == 0)
 	{
 		return (NULL);
