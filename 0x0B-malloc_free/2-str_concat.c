@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		s1 = " ";
+		s1 = "";
 	}
 	if (s2)
 	{
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		s2 = " ";
+		s2 = "";
 	}
 
 	c = (char *)malloc(sizeof(char) * (ln1 + ln2 + 1));
@@ -41,7 +41,9 @@ char *str_concat(char *s1, char *s2)
 	if (s1)
 	{
 		for (ln2 = 0; s2[ln2]; ++ln2)
-			c[ln1+ln2] = s2[ln2];
+		{
+			c[ln1 + ln2] = s2[ln2];
+		}
 	}
 	c[ln1 + ln2] = '\0';
 	return (c);
