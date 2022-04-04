@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef>
+#include <stdio.h>
 
 /**
  * str_concat - concatnate two strings.
@@ -23,8 +25,16 @@ char *_str_concat(char *s1, char *s2)
 	}
 	if (s2)
 	{
+		while (s1[ln2])
+			++ln2;
+	}
+	else
+	{
 		s2 = " ";
 	}
+
+	c = (char *)malloc(sizeof(char) * (ln1 + ln2 + 1));
+
 	if (!c)
 		return (NULL);
 	if (s1)
