@@ -4,7 +4,7 @@
 #include <stddef.h>
 
 /**
- * creat_array - Entry point.
+ * create_array - Entry point.
  * @size: size of the array.
  * @c: character.
  * Return: a ponter to the array.
