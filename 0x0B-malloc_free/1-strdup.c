@@ -9,6 +9,24 @@
  */
 char *_strdup(char *str)
 {
+	char *dup;
+	unsigned int size = 0;
+
+	if (str)
+	{
+		while (str[size++])
+			;
+		dup = malloc(sizeof(char) * size);
+		if (dup)
+		{
+			while (size--)
+				dup[size] = str[size];
+
+			return (dup);
+		}
+	}
+	return (NULL);
+	/*
 	char *strn = NULL;
 	unsigned int i;
 	int n;
@@ -28,5 +46,5 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	strn[i] = '\0';
-	return (strn);
+	return (strn);*/
 }
