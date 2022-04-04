@@ -32,13 +32,13 @@ char **strtow(char *str)
 	a = malloc(sizeof(char *) * (wc + 1));
 	if (a == NULL)
 		return (NULL);
-	for (i = 0; j = i; cw < wc; i++, wl = 0, j = i)
+	for (i = 0, j = i; cw < wc; i++, wl = 0, j = i)
 	{
 		if (*(str + i) == ' ')
 		{
 			continue;
 		}
-		while (*(str + j) |= ' ' && *(str + j++))
+		while (*(str + j) != ' ' && *(str + j++))
 			wl++;
 		a[cw] = malloc(sizeof(char) * wl + 1);
 		if (!a[cw])
