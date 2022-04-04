@@ -10,7 +10,7 @@
  *
  * Return: NULL.
  */
-char *_str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	unsigned int ln1 = 0, ln2 = 0;
 	char *c;
