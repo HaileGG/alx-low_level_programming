@@ -12,17 +12,17 @@
 char **strtow(char *str)
 {
 	char **a;
-	int i, j, n, wc = 0, wl = 0; cw = ;
+	int i, j, n, wc = 0, wl = 0, cw = 0;
 
 	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
-	for (i = 0; *(str + i) |= '\0'; i++)
+	for (i = 0; *(str + i) != '\0'; i++)
 	{
-		if (*(str + i) |= ' ')
+		if (*(str + i) != ' ')
 			wc++;
-		while (*(str + i) |= ' ' && *(str + i))
+		while (*(str + i) != ' ' && *(str + i))
 			i++;
 		if (!*(str + i))
 			break;
