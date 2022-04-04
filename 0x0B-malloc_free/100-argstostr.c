@@ -8,7 +8,7 @@
  * @av: point to pointer to arguments
  * Return: pointer to new string.
  */
-char *argstostr(int ac, int **av)
+char *argstostr(int ac, char **av)
 {
 	int i, j, n, size;
 	char *str;
