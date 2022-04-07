@@ -9,7 +9,7 @@
  *
  * Return: min.
  */
-int *array_range(int min, max)
+int *array_range(int min,int  max)
 {
 	int *ar, in, sz;
 
