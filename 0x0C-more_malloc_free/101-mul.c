@@ -33,7 +33,7 @@ char *_callocx(unsigned int nm)
 	unsigned int i;
 	char *p;
 
-	p = malloac(nm + 1);
+	p = malloc(nm + 1);
 	if (p == 0)
 		return (0);
 	for (i = 0; i < nm; i++)
@@ -64,19 +64,19 @@ int main(int argc, char **argv)
 		tn = 0; tn2 = 0;
 		for (j = l1 - 1; j >= 0; j--)
 		{
-			t1 = i + j + 1;
+			tl = i + j + 1;
 			ml = (argv[1][j] - '0') * (argv[1][i] - '0') + tn;
 			tn = ml / 10;
-			ad = (rs[t1] - '0') + (ml % 10) + tn2;
+			ad = (rs[tl] - '0') + (ml % 10) + tn2;
 			tn2 = ad / 10;
-			rs[t1] = (add % 10) + '0';
+			rs[tl] = (ad % 10) + '0';
 		}
-		rs[t1 - 1] = (tn + tn2) + '0';
+		rs[tl - 1] = (tn + tn2) + '0';
 	}
 	if (rs[0] == '0')
 		zr = 1;
 	for (; zr < lfl; zr++)
-		printf("%C", rs[zr]);
+		printf("%c", rs[zr]);
 	printf("\n");
 	free(rs);
 	return (0);
@@ -87,7 +87,7 @@ char *create_xarray(int size);
 char *iterate_zeroes(char *str);
 void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
-
+**/
 /**
  * find_len - Finds the length of string.
  * @str: The string to be measured.
@@ -304,5 +304,4 @@ int main(int argc, char *argv[])
 	free(final_prod);
 
 	return (0);
-	**/
-}
+}**/
