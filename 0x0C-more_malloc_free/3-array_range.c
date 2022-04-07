@@ -11,7 +11,6 @@
  */
 int *array_range(int min,int  max)
 {
-	/**
 	int *ar, in, sz;
 
 	if (min > max)
@@ -28,7 +27,7 @@ int *array_range(int min,int  max)
 		ar[in] = min++;
 
 	return (ar);
-	**/
+	/**
 	int *ar, i = 0;
 
 	if (min > max)
@@ -46,4 +45,5 @@ int *array_range(int min,int  max)
 		min++;
 	}
 	return (a);
+	**/
 }
