@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /**
- * _realloc - Reallocations a memmory block using malloc.
- * @str: A pointer to the memmory.
+ * *_realloc - Reallocations a memmory block using malloc.
+ * @ptr: A pointer to the memmory.
  * @old_size: The size in bytes.
  * @new_size: The size in bytes.
  *
