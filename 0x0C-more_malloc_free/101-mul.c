@@ -209,9 +209,9 @@ int main(int argc, char *argv[])
 	for (ix = 0; final_prod[ix]; ix++)
 	{
 		if (final_prod[ix] != 'x')
-			_putchar(final_prod[ix]);
+			putchar(final_prod[ix]);
 	}
-	_putchar('\n');
+	putchar('\n');
 
 	free(next_prod);
 	free(final_prod);
