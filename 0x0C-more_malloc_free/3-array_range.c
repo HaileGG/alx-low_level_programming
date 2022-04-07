@@ -9,7 +9,7 @@
  *
  * Return: min.
  */
-int *array_range(int min,int  max)
+int *array_range(int min, int max)
 {
 	int *ar, in, sz;
 
@@ -24,8 +24,10 @@ int *array_range(int min,int  max)
 		return (NULL);
 
 	for (in = 0; in < sz; in++)
-		ar[in] = min++;
-
+	{
+		ar[in] = min;
+		min++;
+	}
 	return (ar);
 	/**
 	int *ar, i = 0;
