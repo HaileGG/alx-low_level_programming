@@ -2,11 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * File: 101-mul.c
- * Auth: haile G.
- */
-
 int find_len(char *str);
 char *create_xarray(int size);
 char *iterate_zeroes(char *str);
@@ -16,7 +11,6 @@ void add_nums(char *final_prod, char *next_prod, int next_len);
 /**
  * find_len - Finds the length of string.
  * @str: The string to be measured.
- *
  * Return: The length of the string.
  */
 int find_len(char *str)
@@ -33,7 +27,6 @@ int find_len(char *str)
  * create_xarray - Creates an array of orders of chars.
  * @size: The size of the array to be initialized.
  * @desc: the functions exits.
- *
  * Return: A pointer to the array.
  */
 char *create_xarray(int size)
@@ -57,7 +50,6 @@ char *create_xarray(int size)
 /**
  * iterate_zeroes - Iterates through a string of numbers.
  * @str: The string of numbers to be iterate through.
- *
  * Return: A pointer to the next non-zero elements.
  */
 char *iterate_zeroes(char *str)
@@ -71,9 +63,7 @@ char *iterate_zeroes(char *str)
 /**
  * get_digit - Converts a digit character to a corres int.
  * @c: The character to be converted.
- *
- * Desc: C is a digit
- *
+ * Desc: C is a digit.
  * Return: The converted int.
  */
 int get_digit(char c)
@@ -95,9 +85,7 @@ int get_digit(char c)
  * @mult: The string of numbers.
  * @digit: The singlr digit.
  * @zeroes: The neccesary number of leading zeroes.
- *
  * @Desc: mult contains a non-digit.
- *
  * Return: void.
  */
 void get_prod(char *prod, char *mult, int digit, int zeroes)
@@ -142,6 +130,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
  * @final_prod: The buffer storing the numbering.
  * @next_prod: The next product to added.
  * @next_len: The length of next_prod.
+ * Return: Sum.
  */
 void add_nums(char *final_prod, char *next_prod, int next_len)
 {
@@ -182,9 +171,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * main - Multiplies two positive numbers.
  * @argv: The number of argument passed.
  * @argc: An array of pointers.
- *
  * Desc: the function exits with a status.
- *
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
@@ -222,9 +209,9 @@ int main(int argc, char *argv[])
 	for (ix = 0; final_prod[ix]; ix++)
 	{
 		if (final_prod[ix] != 'x')
-			putchar(final_prod[ix]);
+			_putchar(final_prod[ix]);
 	}
-	putchar('\n');
+	_putchar('\n');
 
 	free(next_prod);
 	free(final_prod);
