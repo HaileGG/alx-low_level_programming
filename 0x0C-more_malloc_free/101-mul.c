@@ -1,7 +1,87 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
+/**
+ *
+ *
+ */
+int _isnumber(char *s)
+{
+	int i, c, d;
+
+	d = 0, c = 1;
+	for (i = 0; *(s + i) != 0; i++)
+	{
+		d = isdigit(*(s + i));
+		if (d == 0)
+		{
+			c = 0;
+			break;
+		}
+	}
+	return (c);
+}
+/**
+ *
+ *
+ */
+char *_callocx(unsigned int nm)
+{
+	unsigned int i;
+	char *p;
+
+	p = malloac(nm + 1);
+	if (p == 0)
+		return (0);
+	for (i = 0; i < nm; i++)
+		p[i] = '0';
+	p[i] = '\0';
+	return (p);
+}
+/**
+ *
+ *
+ */
+int main(int argc, char **argv)
+{
+	int i, j, l1, l2, lfl, ml, ad, tn, tn2, tl, zr = 0;
+	char *rs;
+
+	if (argc != 3 || _isnumber(argv[1]) == 0 || _isnumber(argv[2]) == 0)
+		printf("Error\n"), exit(98);
+	if (atoi(argv[1]) == 0 || atoi(argv[2]) == 0)
+		printf("0\n"), exit(0);
+	l1 = strlen(argv[1]), l2 = strlen(argv[2]);
+	lfl = l1 + l2;
+	rs = _callocx(lfl);
+	if (rs == 0)
+		printf("Error\n"), exit(98);
+	for (i = l2 - 1; i >= 0; i--)
+	{
+		tn = 0; tn2 = 0;
+		for (j = l1 - 1; j >= 0; j--)
+		{
+			t1 = i + j + 1;
+			ml = (argv[1][j] - '0') * (argv[1][i] - '0') + tn;
+			tn = ml / 10;
+			ad = (rs[t1] - '0') + (ml % 10) + tn2;
+			tn2 = ad / 10;
+			rs[t1] = (add % 10) + '0';
+		}
+		rs[t1 - 1] = (tn + tn2) + '0';
+	}
+	if (rs[0] == '0')
+		zr = 1;
+	for (; zr < lfl; zr++)
+		printf("%C", rs[zr]);
+	printf("\n");
+	free(rs);
+	return (0);
+}
+/**
 int find_len(char *str);
 char *create_xarray(int size);
 char *iterate_zeroes(char *str);
@@ -13,6 +93,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len);
  * @str: The string to be measured.
  * Return: The length of the string.
  */
+/**
 int find_len(char *str)
 {
 	int ln = 0;
@@ -22,13 +103,14 @@ int find_len(char *str)
 
 	return (ln);
 }
-
+**/
 /**
  * create_xarray - Creates an array of orders of chars.
  * @size: The size of the array to be initialized.
  * @desc: the functions exits.
  * Return: A pointer to the array.
  */
+/**
 char *create_xarray(int size)
 {
 	char *arr;
@@ -46,12 +128,13 @@ char *create_xarray(int size)
 
 	return (arr);
 }
-
+**/
 /**
  * iterate_zeroes - Iterates through a string of numbers.
  * @str: The string of numbers to be iterate through.
  * Return: A pointer to the next non-zero elements.
  */
+/**
 char *iterate_zeroes(char *str)
 {
 	while (*str && *str == '0')
@@ -59,13 +142,14 @@ char *iterate_zeroes(char *str)
 
 	return (str);
 }
-
+**/
 /**
  * get_digit - Converts a digit character to a corres int.
  * @c: The character to be converted.
  * Desc: C is a digit.
  * Return: The converted int.
  */
+/**
 int get_digit(char c)
 {
 	int dig = c - '0';
@@ -78,7 +162,7 @@ int get_digit(char c)
 
 	return (dig);
 }
-
+**/
 /**
  * get_prod - Muliple a string of numbers.
  * @prod: The buffer to store the result.
@@ -88,6 +172,7 @@ int get_digit(char c)
  * @Desc: mult contains a non-digit.
  * Return: void.
  */
+/**
 void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
 	int mu_ln, nu, tn = 0;
@@ -124,7 +209,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 	if (tn)
 		*prod = (tn % 10) + '0';
 }
-
+**/
 /**
  * add_nums - Adds the numbers stored in two strings.
  * @final_prod: The buffer storing the numbering.
@@ -132,6 +217,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
  * @next_len: The length of next_prod.
  * Return: Sum.
  */
+/**
 void add_nums(char *final_prod, char *next_prod, int next_len)
 {
 	int nu, tn = 0;
@@ -166,7 +252,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 	if (tn)
 		*final_prod = (tn % 10) + '0';
 }
-
+**/
 /**
  * main - Multiplies two positive numbers.
  * @argv: The number of argument passed.
@@ -174,6 +260,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * Desc: the function exits with a status.
  * Return: Always 0.
  */
+/**
 int main(int argc, char *argv[])
 {
 	char *final_prod, *next_prod;
@@ -217,4 +304,5 @@ int main(int argc, char *argv[])
 	free(final_prod);
 
 	return (0);
+	**/
 }
