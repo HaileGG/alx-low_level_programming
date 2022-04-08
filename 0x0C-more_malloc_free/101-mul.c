@@ -9,6 +9,7 @@
  * @s: string S.
  * Return: Length of string.
  */
+/**
 int _strlen(char *s)
 {
 	char *p s;
@@ -17,6 +18,7 @@ int _strlen(char *s)
 		s++;
 	return (s - p);
 }
+**/
 /**
  * *_memset - fills memory with a constant byte.
  * @s: the memory area to be filled.
@@ -24,6 +26,7 @@ int _strlen(char *s)
  * @n: number of bytes to fill with.
  * Return: a pointer to the memory.
  */
+/**
 char *_memset(char *s, char b, unsigned int n)
 {
 	char *p = s;
@@ -32,13 +35,14 @@ char *_memset(char *s, char b, unsigned int n)
 		*p++ = b;
 
 	return (s);
-}
+}**/
 /**
  * *_calloc - allocates memory for an array.
  * @memb: number of elements.
  * @size: size of each elemet.
  * Return: void *
  */
+/**
 void *_calloc(unsigned int memb, unsigned int size)
 {
 	void *ptr;
@@ -54,11 +58,13 @@ void *_calloc(unsigned int memb, unsigned int size)
 
 	return (ptr);
 }
+**/
 /**
  * _puts - prints a string, followed by a new line.
  * @str: the input string.
  * Return: nothing to return.
  */
+/**
 void _puts(char *str)
 {
 	while (*str != 0)
@@ -68,11 +74,13 @@ void _puts(char *str)
 	}
 	_putchar('\n');
 }
+**/
 /**
  * strNumbers - determines if string has only numbers.
  * @str: input string.
  * Return: 0.
  */
+/**
 int strNumbers(char *str)
 {
 	while (*str)
@@ -83,12 +91,14 @@ int strNumbers(char *str)
 	}
 	return (1);
 }
+**/
 /**
  * multiply - multiplies two numbers and prints the result.
  * @n1: first number.
  * @n2: second number.
  * Return: void.
  */
+/**
 void multiply(char *n1, char *n2)
 {
 	int ix, nn1, nn2, rs, tp, ttl;
@@ -131,12 +141,14 @@ void multiply(char *n1, char *n2)
 	_putchar('\n');
 	free(ptr);
 }
+**/
 /**
  * main - adds positive numbers.
  * @argc: the number of arguments.
  * @argv: the arguments.
  * Return: 0.
  */
+/**
 int main(int argc, char **argv)
 {
 	char *nb1 = argv[1];
@@ -153,8 +165,14 @@ int main(int argc, char **argv)
 		multiply(nb1, nb2);
 	return (0);
 }
+**/
+
 /**
-int _isnumber(char *s)
+ * _isNumber - checke the given number.
+ * @s: a string.
+ * Return: pointer.
+ */
+int _isNumber(char *s)
 {
 	int i, c, d;
 
@@ -170,8 +188,12 @@ int _isnumber(char *s)
 	}
 	return (c);
 }
-**/
+
 /**
+ * *_callocx - chacks malloc
+ * @nm: long integer.
+ * Return: pointer.
+ */
 char *_callocx(unsigned int nm)
 {
 	unsigned int i;
@@ -184,14 +206,14 @@ char *_callocx(unsigned int nm)
 		p[i] = '0';
 	p[i] = '\0';
 	return (p);
-}**/
+}
+
 /**
  * main - getting the args.
  * @argc: args.
  * @argv: arg array.
  * Return: 0.
  */
-/**
 int main(int argc, char **argv)
 {
 	int i, j, l1, l2, lfl, ml, ad, tn, tn2, tl, zr = 0;
@@ -228,7 +250,7 @@ int main(int argc, char **argv)
 	free(rs);
 	return (0);
 }
-**/
+
 /**
 int find_len(char *str);
 char *create_xarray(int size);
