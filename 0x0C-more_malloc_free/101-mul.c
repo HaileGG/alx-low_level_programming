@@ -27,7 +27,7 @@ void _print(char *str, int l)
 }
 
 /**
- * *mul - Multiplies a char with a string and places the answer into dest.
+ * mul - Multiplies a char with a string and places the answer into dest.
  * @n: char to multiply.
  * @num: string to multiply.
  * num_ix: last non NULL index of num.
@@ -133,7 +133,6 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-
 	_print(a, ln - 1);
 	return (0);
 }
