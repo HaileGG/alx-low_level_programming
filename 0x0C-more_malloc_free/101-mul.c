@@ -27,7 +27,7 @@ int _isNumber(char *s)
 }
 
 /**
- * *_callocx - chacks malloc
+ * _callocx - chacks malloc
  * @nm: long integer.
  * Return: pointer.
  */
@@ -64,7 +64,10 @@ int main(int argc, char **argv)
 	lfl = l1 + l2;
 	rs = _callocx(lfl);
 	if (rs == 0)
-		printf("Error\n"), exit(98);
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	for (i = l2 - 1; i >= 0; i--)
 	{
 		tn = 0; tn2 = 0;
@@ -82,7 +85,9 @@ int main(int argc, char **argv)
 	if (rs[0] == '0')
 		zr = 1;
 	for (; zr < lfl; zr++)
+	{
 		printf("%c", rs[zr]);
+	}
 	printf("\n");
 	free(rs);
 	return (0);
