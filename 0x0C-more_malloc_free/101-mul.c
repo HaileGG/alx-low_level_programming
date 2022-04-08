@@ -137,7 +137,6 @@ void multiply(char *n1, char *n2)
  * @argv: the arguments.
  * Return: 0.
  */
-/**
 int main(int argc, char **argv)
 {
 	char *nb1 = argv[1];
@@ -154,7 +153,6 @@ int main(int argc, char **argv)
 		multiply(nb1, nb2);
 	return (0);
 }
-**/
 /**
 int _isnumber(char *s)
 {
