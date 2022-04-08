@@ -219,7 +219,7 @@ int main(int argc, char **argv)
 	int i, j, l1, l2, lfl, ml, ad, tn, tn2, tl, zr = 0;
 	char *rs;
 
-	if (argc != 3 || _isnumber(argv[1]) == 0 || _isnumber(argv[2]) == 0)
+	if (argc != 3 || _isNumber(argv[1]) == 0 || _isNumber(argv[2]) == 0)
 		printf("Error\n"), exit(98);
 	if (atoi(argv[1]) == 0 || atoi(argv[2]) == 0)
 		printf("0\n"), exit(0);
