@@ -38,16 +38,19 @@ int main(int argc, char *argv[])
 	return (0);
 }
 **/
+
 /**
- * _isNumber - checke the given number.
+ * _isNumber - checks the given number.
  * @s: a string.
  * Return: pointer.
  */
+
 int _isNumber(char *s)
 {
 	int i, c, d;
 
 	d = 0, c = 1;
+
 	for (i = 0; *(s + i) != 0; i++)
 	{
 		d = isdigit(*(s + i));
@@ -73,8 +76,11 @@ char *_callocx(unsigned int nm)
 	if (p == 0)
 		return (0);
 	for (i = 0; i < nm; i++)
+	{
 		p[i] = '0';
+	}
 	p[i] = '\0';
+
 	return (p);
 }
 /**
@@ -89,9 +95,15 @@ int main(int argc, char **argv)
 	char *rs;
 
 	if (argc != 3 || _isNumber(argv[1]) == 0 || _isNumber(argv[2]) == 0)
-		printf("Error\n"), exit(98);
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	if (atoi(argv[1]) == 0 || atoi(argv[2]) == 0)
-		printf("0\n"), exit(0);
+	{
+		printf("0\n");
+	       	exit(0);
+	}
 	l1 = strlen(argv[1]), l2 = strlen(argv[2]);
 	lfl = l1 + l2;
 	rs = _callocx(lfl);
