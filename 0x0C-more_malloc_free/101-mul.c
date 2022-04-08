@@ -20,9 +20,9 @@ void _print(char *str, int l)
 		if (str[i] != '0')
 			j = 1;
 		if (j || i == l - 1)
-			_putchar(str[i]);
+			putchar(str[i]);
 	}
-	_putchar('\n');
+	putchar('\n');
 	free(str);
 }
 
@@ -92,11 +92,11 @@ int main(int argc, char *argv[])
 	char *a, *t;
 	char err[] = "Error\n";
 
-	if (argc != 3 || check_for_digits(argv))
+	if (argc != 3 || isdigit(argv))
 	{
 		for (ti = 0; err[ti]; ti++)
 		{
-			_putchar(err[ti]);
+			putchar(err[ti]);
 		}
 		exit(98);
 	}
@@ -112,13 +112,28 @@ int main(int argc, char *argv[])
 	a = malloc(ln * sizeof(char));
 	if (a == NULL)
 	{
-		for (ti = ; err[ti]; ti++)
+		for (ti = 0; err[ti]; ti++)
 		{
-			_putchar(err[ti]);
+			putchar(err[ti]);
 		}
 		free(a);
 		exit(98);
 	}
+	init(a, ln - 1);
+	for (ti = l2 - 1, i = 0; ti >= 0; ti--, i++)
+	{
+		t = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
+		if (t == NULL)
+		{
+			for (ti = 0; err[ti]; ti++)
+			{
+				putchar(err[ti]);
+			}
+			free(a);
+			exit(98);
+		}
+	}
+
 	_print(a, ln - 1);
 	return (0);
 }
