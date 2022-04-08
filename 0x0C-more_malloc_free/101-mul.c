@@ -10,10 +10,10 @@
  * @argv: arguments.
  * Return: 0 Seccess.
  */
- 
+/** 
 int main(int argc, char *argv[])
 {
-	unsigned int mul;
+	unsigned long mul;
 	int i, j;
 
 	if (argc != 3)
@@ -37,12 +37,12 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+**/
 /**
  * _isNumber - checke the given number.
  * @s: a string.
  * Return: pointer.
  */
-/**
 int _isNumber(char *s)
 {
 	int i, c, d;
@@ -59,13 +59,11 @@ int _isNumber(char *s)
 	}
 	return (c);
 }
-**/
 /**
  * _callocx - chacks malloc
  * @nm: long integer.
  * Return: pointer.
  */
-/**
 char *_callocx(unsigned int nm)
 {
 	unsigned int i;
@@ -79,14 +77,12 @@ char *_callocx(unsigned int nm)
 	p[i] = '\0';
 	return (p);
 }
-**/
 /**
  * main - getting the args.
  * @argc: args.
  * @argv: arg array.
  * Return: 0.
  */
-/**
 int main(int argc, char **argv)
 {
 	int i, j, l1, l2, lfl, ml, ad, tn, tn2, tl, zr = 0;
@@ -128,4 +124,3 @@ int main(int argc, char **argv)
 	free(rs);
 	return (0);
 }
-**/
