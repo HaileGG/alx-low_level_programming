@@ -8,6 +8,9 @@
  */
 int main(void)
 {
+	#ifndef NAME_H
+
 	printf("%s\n", _FILE_);
 	return (0);
+#endif /*NAME_H */
 }
