@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #ifndef _MAIN_
 
 /**
@@ -12,5 +13,6 @@ int main(void)
 
 	printf("%s\n", _FILE_);
 	return (0);
-#endif /*NAME_H */
+
+	#endif /*NAME_H */
 }
