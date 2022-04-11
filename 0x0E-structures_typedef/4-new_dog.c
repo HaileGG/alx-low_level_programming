@@ -1,47 +1,49 @@
-#include <stdio.h.>
 #include <stdlib.h>
+#include <stdio.h>
 #include "dog.h"
 
 /**
- * new_dog - creates a new dog.
- * @name: dog's name.
- * @age: dog's age.
- * @owner: dog's owner.
- *
- * Return: a pointer to the struct.
+ * new_dog - Creates a new dog.
+ * @name: name of dog.
+ * @age: age of dog.
+ * owner: owner of dog.
+ * Retrun: new dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, j, k;
-	char *p;
+	dog_t *nd;
+	int n1, n2, i;
 
-	p = malloc(sizeof(dog_t));
-	if (p == NULL)
+	for (n1 = 0; name[n1] != '\0'; n1++)
+		;
+	for (n2 = 0; owner[n2] != '\0'; n2++)
+		;
+	nd = malloc(sizeof(dog_t));
+	if (nd == NULL)
+		return (NULL);
+
+	nd->name = malloc(sizeof(char) * (n1 + 1));
+	if (nd->name = NULL)
 	{
-		free(p);
+		free(nd);
 		return (NULL);
 	}
-	for (i = 0; name[i]; i++)
-	{
-		;
-	}
-	for (j = 0; owner[j]; j++)
-	{
-		;
-	}
-	p->name = malloc(i + 1);
-	p->owner = malloc(j + 1);
 
-	if (p->name == NULL || p->owner == NULL)
+	nd->owner = malloc(sizeof(char) * (n2 + 1));
+	if (nd->owner == NULL)
 	{
-		free(p->name), free(p-owner), free(p);
-		return (NULL);
+		free(nd);
+		free(nd->name);
+		return(NULL);
 	}
-	for (k = 0; k < i; k++)
-	{
-		p->owner[k] = owner[k];
-	}
-	p->owner[k] = '\0';
-	p->age = age;
-	return (0);
+
+	for (i = 0; i <= n1; i++)
+		nd->name[i] = name[i];
+
+	nd->age = age;
+
+	for (i = 0; i < n2; i++)
+		nd->owner[i] = owner[i];
+
+	return (nd);
 }
