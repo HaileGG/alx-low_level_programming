@@ -1,38 +1,52 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <udis86.h>
 
 /**
- * main - ....
- * @argc: ....
- * @argv: ....
+ * print_opcodes - program that prints the opcodes of its own main function.
+ * @a: address of the main function.
+ * @n: number of bytes to print
  *
- * Return: ....
+ * Return: Nothing.
+ */
+void print_opcodes(char *a, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%.2x", a[i]);
+		if (i < n - 1)
+		{
+			printf(" ");
+		}
+	}
+	printf("\n");
+}
+/**
+ * main - Prints the opcodes of itself.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
-	ud_t ud_j;
-	int v = 0, i = 0;
+	int e;
 
-	if (argc == 2)
+	if (argc != 2)
 	{
-		v = atoi(argv[1]);
-
-		if (v < 0)
-		{
-			printf("Error\n");
-			exit(2);
-		}
-
-		ud_unit(&ud_j);
-		ud_set_input_buffer(&ud_j, argv[1], v);
-		ud_set_mode(&ud_j, 64);
-		ud_set_syntax(&ud_j, UN_SYN_INTEL);
-
-		while (ud_disassemble(&ud_j))
-		{
-			printf("\t%s\n", ud_insn_hex(&ud_j));
-		}
+		printf("Error\n");
+		exit(1);
 	}
+
+	e = atoi(argv[1]);
+	if (e < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	print_opcodes((char *)&main, e);
+
 	return (0);
+	
 }
