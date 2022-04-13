@@ -8,6 +8,7 @@
  *
  * Return: Nothing.
  */
+/**
 void print_opcodes(char *a, int n)
 {
 	int i;
@@ -22,6 +23,7 @@ void print_opcodes(char *a, int n)
 	}
 	printf("\n");
 }
+**/
 /**
  * main - Prints the opcodes of itself.
  * @argc: The number of arguments supplied to the program.
@@ -29,6 +31,34 @@ void print_opcodes(char *a, int n)
  *
  * Return: Always 0.
  */
+int main(int argc, char *argv[])
+{
+	char *add;
+	int i, b;
+
+	if (argc != 1)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	if (atoi(argv[1]) < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	add = atoi(char *)&main;
+	b = atoi(argv[1]);
+	i = 0;
+	while (i < b - 1)
+	{
+		printf("%.2x", add[i]);
+		i++;
+	}
+	printf("%.2x\n", add[i]);
+	return (0);
+}
+/**
 int main(int argc, char *argv[])
 {
 	int e;
@@ -50,3 +80,4 @@ int main(int argc, char *argv[])
 	return (0);
 	
 }
+**/
