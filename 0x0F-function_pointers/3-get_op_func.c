@@ -1,12 +1,14 @@
 #include "3-calc.h"
+#include "function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * get_op_func - ...
- * @s: ...
+ * get_op_func - gets the operation of function.
+ * @s: a string.
  *
- * Return: ...
+ * Return: int.
  */
 int (*get_op_func(char *s))(int, int)
 {
