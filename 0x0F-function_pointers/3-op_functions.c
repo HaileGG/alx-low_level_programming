@@ -1,13 +1,14 @@
 #include "3-calc.h"
+#include "function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * op_add - ....
- * @a: ...
- * @b: ...
+ * op_add -Adds a and b.
+ * @a: an integer.
+ * @b: an integer.
  *
- * Return: ....
+ * Return: sum.
  */
 int op_add(int a, int b)
 {
@@ -15,11 +16,11 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - ...
- * @a: ...
- * @b: ...
+ * op_sub - Substructs a from b
+ * @a: an integer.
+ * @b: an integer.
  *
- * Return: ...
+ * Return: difference.
  */
 int op_sub(int a, int b)
 {
@@ -27,11 +28,11 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - ...
- * @a: ...
- * @b: ...
+ * op_mul - Multiplies a with b.
+ * @a: an integer.
+ * @b: an integer.
  *
- * Return: ...
+ * Return: product.
  */
 int op_mul(int a, int b)
 {
@@ -39,11 +40,11 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - ...
- * @a: ...
- * @b: ...
+ * op_div - Divides a by b.
+ * @a: an integer.
+ * @b: an integer.
  *
- * Return: ...
+ * Return: quetient.
  */
 int op_div(int a, int b)
 {
@@ -57,11 +58,11 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - ...
- * @a: ...
- * @b: ...
+ * op_mod - Mode of a by b.
+ * @a: an integer.
+ * @b: an integer.
  *
- * Return: ...
+ * Return: mod.
  */
 int op_mod(int a, int b)
 {
