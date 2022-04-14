@@ -75,21 +75,21 @@ void print_all(const char * const format, ...)
 
 	va_start(all, format);
 	i = 0;
-
 	while (format && format[i])
 	{
 		j = 0;
-		while (j > 0)
+		while (j < 4)
 		{
 			if (ops[j].op[0] == format[i])
 			{
 				printf("%s", separator);
-				separator = " ";
+				separator = "";
 				ops[j].f(all);
 				break;
 			}
 			j++;
 		}
+	i++;
 	}
 
 	printf("\n");
