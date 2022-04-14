@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * main - Check the program.
+ * main - Check the program that calvulator 2 numbers.
  * @argc: the number of arguments.
  * @argv: the parameter of the case number.
  *
@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
+
 	re = oprt(atoi(argv[1]), atoi(argv[3]));
 
 	printf("%d\n", re);
