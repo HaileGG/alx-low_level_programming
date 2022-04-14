@@ -12,6 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
+	int re;
 	int (*oprt)(int, int);
 
 		if (argc != 4)
@@ -22,12 +23,18 @@ int main(int argc, char *argv[])
 
 	oprt = get_op_func(argv[2]);
 
-	if (!oprt)
+	if (oprt == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == '0')
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	re = oprt(atoi(argv[1]), atoi(argv[3]));
 
-	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", re);
 	return (0);
 }
