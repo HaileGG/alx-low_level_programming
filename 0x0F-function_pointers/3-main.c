@@ -12,33 +12,22 @@
  */
 int main(int argc, char *argv[])
 {
-	int n1, n2, res;
 	int (*oprt)(int, int);
 	
-	if (argc == 4)
+	if (argc != 4)
 	{
-		if (argv[2][1] != '\0')
-		{
-			printf("Error\n");
-			exit(98);
-		}
-		oprt = get_op_func(argv[2]);
-		if (oprt == NULL)
-		{
-			printf("Error\n");
-			exit(99);
-		}
-
-		n1 = atoi(argv[1]);
-		n2 = atoi(argv[3]);
-		res = oprt(n1, n2);
-
-		printf("%d\n", res);
-		return (0);
+		printf("Error\n");
+		exit(98);
 	}
-	else
+	
+	oprt = get_op_func(argv[2]);
+
+	if (!oprt)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
+	return (0);
 }
