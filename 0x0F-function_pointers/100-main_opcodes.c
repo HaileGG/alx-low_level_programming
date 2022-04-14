@@ -8,7 +8,6 @@
  *
  * Return: Nothing.
  */
-
 void print_opcodes(int n)
 {
 	int i;
@@ -47,6 +46,5 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	print_opcodes(e);
-
 	return (0);
 }
