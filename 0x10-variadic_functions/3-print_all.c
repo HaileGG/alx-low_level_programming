@@ -45,7 +45,7 @@ void op_s(va_list form)
 {
 	char *str;
 
-	str = va_arg(for, char *);
+	str = va_arg(form, char *);
 	if (str == NULL)
 	{
 		printf("(nil)");
