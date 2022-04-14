@@ -3,7 +3,6 @@
 
 /**
  * print_opcodes - program that prints the opcodes of its own main function.
- * @a: address of the main function.
  * @n: number of bytes to print
  *
  * Return: Nothing.
@@ -21,6 +20,7 @@ void print_opcodes(int n)
 	}
 	printf("\n");
 }
+
 /**
  * main - Prints the opcodes of itself.
  * @argc: The number of arguments supplied to the program.
@@ -28,7 +28,6 @@ void print_opcodes(int n)
  *
  * Return: Always 0.
  */
-
 int main(int argc, char *argv[])
 {
 	int e;
