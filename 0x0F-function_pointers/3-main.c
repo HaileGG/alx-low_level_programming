@@ -12,14 +12,17 @@
  */
 int main(int argc, char *argv[])
 {
-	int re;
+	int n1, n2, re;
 	int (*oprt)(int, int);
 	
-	if (argc != 4)
+	if (argc < 4 || argc > 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
 
 	oprt = get_op_func(argv[2]);
 
@@ -28,6 +31,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
+	re = oprt(n1, n2);
+
+/**
 	if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == '0')
 	{
 		printf("Error\n");
@@ -35,7 +41,7 @@ int main(int argc, char *argv[])
 	}
 
 	re = oprt(atoi(argv[1]), atoi(argv[3]));
-
+**/
 	printf("%d\n", re);
 	return (0);
 }
