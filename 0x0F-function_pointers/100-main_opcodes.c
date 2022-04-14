@@ -15,7 +15,7 @@ void print_opcodes(char *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%.2x", a[i]);
+		printf("%02x", a[i]);
 		if (i < n - 1)
 		{
 			printf(" ");
@@ -49,6 +49,5 @@ int main(int argc, char *argv[])
 	}
 	print_opcodes((char *)&main, e);
 
-	return (0);
-	
+	return (0);	
 }
