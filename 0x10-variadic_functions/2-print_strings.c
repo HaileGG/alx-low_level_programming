@@ -31,7 +31,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			break;
 		}
 		printf("%s", str);
-		if (n == i -1)
+		if (n == i + 1)
 		{
 			break;
 		}
