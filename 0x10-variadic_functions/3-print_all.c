@@ -83,7 +83,7 @@ void print_all(const char * const format, ...)
 			if (ops[j].op[0] == format[i])
 			{
 				printf("%s", separator);
-				separator = "";
+				separator = ", ";
 				ops[j].f(all);
 				break;
 			}
