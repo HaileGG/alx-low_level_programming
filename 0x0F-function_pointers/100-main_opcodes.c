@@ -2,27 +2,6 @@
 #include <stdlib.h>
 
 /**
- * print_opcodes - program that prints the opcodes of its own main function.
- * @n: number of bytes to print
- *
- * Return: Nothing.
- */
-/**
-void print_opcodes(int n)
-{
-	int i;
-
-	for (i = 0; i < n; i++)
-	{
-		if (i < n - 1)
-		{
-			printf(" ");
-		}
-	}
-	printf("\n");
-}
-**/
-/**
  * main - Prints the opcodes of itself.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
