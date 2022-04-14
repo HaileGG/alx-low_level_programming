@@ -9,13 +9,12 @@
  * Return: Nothing.
  */
 
-void print_opcodes(char *a, int n)
+void print_opcodes(int n)
 {
 	int i;
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%02x", a[i]);
 		if (i < n - 1)
 		{
 			printf(" ");
@@ -47,7 +46,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	print_opcodes((char *)&main, e);
+	print_opcodes(e);
 
 	return (0);
 }
