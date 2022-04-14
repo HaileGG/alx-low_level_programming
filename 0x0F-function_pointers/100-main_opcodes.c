@@ -31,7 +31,8 @@ void print_opcodes(int n)
  */
 int main(int argc, char *argv[])
 {
-	int i, n;
+	int n;
+	char *m = (char *) main;
 
 	if (argc != 2)
 	{
@@ -40,22 +41,16 @@ int main(int argc, char *argv[])
 	}
 
 	n = atoi(argv[1]);
+
 	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	for (i = 0; i < n; i++)
+
+	while (n--)
 	{
-		printf("%02hx", *((char *)main + i));
-		if (i < n -1)
-		{
-			printf(" ");
-		}
-		else
-		{
-			printf("\n");
-		}
+		printf("%02x%c", *m++ & 0xff, n ? ' ' : '\n');
 	}
 	return (0);
 }
