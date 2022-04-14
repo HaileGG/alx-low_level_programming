@@ -1,13 +1,14 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * main - ....
- * @argc: ....
- * @argv: ....
+ * main - Check the program.
+ * @argc: the number of arguments.
+ * @argv: the parameter of the case number.
  *
- * Return: ....
+ * Return: 0 in Success.
  */
 int main(int argc, char *argv[])
 {
@@ -16,7 +17,7 @@ int main(int argc, char *argv[])
 		if (argc != 4)
 		{
 			printf("Error\n");
-			exit(98);
+			exit(99);
 		}
 
 	oprt = get_op_func(argv[2]);
