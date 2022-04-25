@@ -16,17 +16,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *nodes = h;
-	size_t count = 0;
+	size_t nodes = 0;
 
-	if (nodes != NULL)
+	while (h)
 	{
-		while (nodes)
-		{
-			printf("%d\n", nodes->n);
-			count++;
-			nodes = nodes->next;
-		}
+		nodes++;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
-	return (count);
+
+	return (nodes);
 }
