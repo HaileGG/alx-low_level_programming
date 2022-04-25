@@ -4,6 +4,9 @@
  */
 
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * insert_nodeint_at_index - Inserts a new node to a listint_t list at a given position.
