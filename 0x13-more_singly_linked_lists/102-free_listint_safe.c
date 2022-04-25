@@ -4,6 +4,7 @@
  */
 
 #include "lists.h"
+#include <stdio.h>
 
 size_t looped_listint_count(listint_t *head);
 size_t free_listint_safe(listint_t **h);
@@ -57,8 +58,10 @@ size_t looped_listint_count(listint_t *head)
 }
 
 /**
- * free_listint_safe - Frees a listint_t list safely (ie. can free lists containing loops)
- * @h: A pointer to the address on the head of the listint_t list.
+ * free_listint_safe - Frees a listint_t list safely (ie.
+ *                     can free lists containing loops)
+ * @h: A pointer to the address of
+ *     the head of the listint_t list.
  *
  * Return: The size of the list that was freed.
  *
