@@ -7,7 +7,6 @@
  * Desc: Header file containing prototypes and definitions for all functions
  *       in the 0x13 More Lingly Linked Lists.
  */
- 
 #include <stdlib.h>
 
 /**
