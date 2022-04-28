@@ -1,12 +1,7 @@
-/**
- * File: 5-flip_bits.c
- * Auth: Haile G
- */
-
 #include "main.h"
 
 /**
- * flip_bits - Counts the number of bits needed to be flipprd.
+ * flip_bits - Counts the number of bits needed to be flipped.
  * @n: The number.
  * @m: The number to flip n to.
  *
@@ -21,6 +16,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		bs += (xr & 1);
 		xr >>= 1;
 	}
-
 	return (bs);
 }
