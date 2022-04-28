@@ -2,7 +2,6 @@
  * File: 4-clear_bit.c
  * Auth: Haile G
  */
-
 #include "main.h"
 
 /**
