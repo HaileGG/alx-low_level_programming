@@ -7,18 +7,9 @@
  * Return: 0.
  */
 int get_endianness(void)
-{	
+{
 	unsigned int num = 1;
 	char *c = (char *) &num;
 
 	return ((int)*c);
-	/**
-	char *endn =(char *)&num;
-
-	if (*endn == 1)
-	{
-		return (1);
-	}
-	return (0);
-	*/
 }
