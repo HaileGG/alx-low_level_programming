@@ -1,9 +1,6 @@
-/**
- * File: 0-binary_to_uint.c
- * Auth: Haile G
- */
 #include "main.h"
 #include <stddef.h>
+
 /**
  * binary_to_uint - Converts a binary number to uint.
  * @b: A pointer to a string of 0 and 1.
